@@ -13,6 +13,9 @@ my_api_key = os.getenv('OPENAI_API_KEY')
 
 client = OpenAI(api_key=my_api_key)
 
+def redirect_to_mern_website():
+    st.markdown("<a href='http://localhost:3000'>Go back to MERN website homepage</a>", unsafe_allow_html=True)
+
 def get_stock_price(ticker):
     return str(yf.Ticker(ticker).history(period='1y').iloc[-1].Close)
 
@@ -170,6 +173,9 @@ if 'messages' not in st.session_state:
     st.session_state['messages'] = []
 
 st.title('Personal Financial Analyst Assistant')
+
+if st.button("Go back to MERN website"):
+        redirect_to_mern_website()
 
 user_input = st.text_input('Your input:')
 
