@@ -1,6 +1,6 @@
 openai
 pandas
-matplotlib.pyplot
+matplotlib
 streamlit
 yfinance
 dotenv
