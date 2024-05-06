@@ -5,9 +5,6 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import yfinance as yf
 import os
-import dotenv
-
-dotenv.load_dotenv()
 
 my_api_key = os.getenv('OPENAI_API_KEY')
 
