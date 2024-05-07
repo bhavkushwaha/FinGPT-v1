@@ -171,7 +171,7 @@ if 'messages' not in st.session_state:
 
 st.title('Personal Financial Analyst Assistant')
 
-if st.button("Go back to MERN website"):
+if st.button("Return"):
         redirect_to_mern_website()
 
 user_input = st.text_input('Your input:')
