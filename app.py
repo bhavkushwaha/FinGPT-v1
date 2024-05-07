@@ -11,7 +11,7 @@ my_api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI(api_key=my_api_key)
 
 def redirect_to_mern_website():
-    st.markdown("<a href='http://localhost:3000'>Go back to MERN website homepage</a>", unsafe_allow_html=True)
+    st.markdown("<a href='https://finance-track-app.vercel.app/'>Go back to Dashboard</a>", unsafe_allow_html=True)
 
 def get_stock_price(ticker):
     return str(yf.Ticker(ticker).history(period='1y').iloc[-1].Close)
